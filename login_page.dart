@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:test_1/forgetPassword.dart';
-import 'package:test_1/signUp.dart';
+import 'package:educational_app_game/forgetPassword.dart';
+import 'package:educational_app_game/signUp.dart';
+import 'package:educational_app_game/homepage.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -14,17 +15,24 @@ class _LoginSignupPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.black,
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 70,
+        ),
         width: MediaQuery.of(context).size.width,
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
             children: <Widget>[
-              const SizedBox(height: 424), //how far email field from above
+              const SizedBox(height: 40), //how far email field from above
+              Image.asset('assets/images/logo.png',
+              width: 190,
+                height: 190,
+              ),
+              const SizedBox(height: 40),
               TextField(
                 decoration: InputDecoration(
-                    hintText: 'Email',hintStyle: TextStyle(color: Colors.white),
+                    hintText: 'Email',
                     prefixIcon: const Icon(Icons.email),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -53,8 +61,8 @@ class _LoginSignupPageState extends State<LoginPage> {
               TextField(
 
                 decoration: InputDecoration(
-                  hintText: 'password',hintStyle: TextStyle(color: Colors.white),
-                  prefixIcon: const Icon(Icons.email),
+                  hintText: 'Password',
+                  prefixIcon: const Icon(Icons.lock),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                     borderSide: const BorderSide(
@@ -80,11 +88,18 @@ class _LoginSignupPageState extends State<LoginPage> {
                 ),
               ),
               const SizedBox(height: 50),
-              MaterialButton(
+
+            MaterialButton(
                   elevation: 5.0 ,
                   color: Colors.blue, //backgroun Login
                   padding: const EdgeInsets.symmetric(
                       vertical: 20, horizontal: 80),
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder:(context){
+                      return const HomePage();
+                    }));
+                  },
                   child: const Text(
                       'Login',
                       style: TextStyle(
@@ -92,12 +107,12 @@ class _LoginSignupPageState extends State<LoginPage> {
                         fontSize: 23,
                         fontWeight: FontWeight.bold,
                       ),
-                  ),
+                  ),),
                   shape:OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30), // radius of login feld
                     borderSide: BorderSide.none,
                   ) ,
-                  onPressed: () {}),
+                  onPressed: () {},),
               const SizedBox(height: 20), //size forget the password
 
               GestureDetector(
