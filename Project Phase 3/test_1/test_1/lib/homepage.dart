@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => ResultScreen(score: 1, levelcontroller: 1, lecturecontroller: 1,)));},
             icon: const Icon(
               Icons.grade,
               size: 35,
