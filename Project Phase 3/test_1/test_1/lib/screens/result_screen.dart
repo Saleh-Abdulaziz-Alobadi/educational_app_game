@@ -29,6 +29,9 @@ class ResultScreen extends StatelessWidget {
               fontSize: 34,
               fontWeight: FontWeight.w500,
             ),
+          ),Text(
+            '+3 for correct, -3 for mistake',
+            style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
           ),
           Stack(
             alignment: Alignment.center,
