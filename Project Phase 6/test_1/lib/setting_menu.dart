@@ -22,7 +22,7 @@ class SettingMenu extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 0.5, 50),
-                primary: Colors.indigoAccent, // Change the background color
+                backgroundColor: Colors.indigoAccent, // Change the background color
               ),
               child: Text(
                 'Dark Mode',
@@ -39,7 +39,7 @@ class SettingMenu extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 0.5, 50),
-                primary: Colors.indigoAccent,
+                backgroundColor: Colors.indigoAccent,
               ),
               child:  Text('Control Sound',
               style: TextStyle(
@@ -55,7 +55,7 @@ class SettingMenu extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 0.5, 50),
-                primary: Colors.indigoAccent,
+                backgroundColor: Colors.indigoAccent,
               ),
               child: const Text('App Version',
                 style: TextStyle(
@@ -71,7 +71,7 @@ class SettingMenu extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 0.5, 50),
-                primary: Colors.indigoAccent,
+                backgroundColor: Colors.indigoAccent,
               ),
               child: const Text('About LJAVA',
                 style: TextStyle(
@@ -90,7 +90,7 @@ class SettingMenu extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 0.5, 50),
-                primary: Colors.indigoAccent,
+                backgroundColor: Colors.indigoAccent,
               ),
               child: const Text('Profile',
                 style: TextStyle(
@@ -106,7 +106,7 @@ class SettingMenu extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 0.5, 50),
-                primary: Colors.indigoAccent,
+                backgroundColor: Colors.indigoAccent,
               ),
               child: const Text('Logout',
                 style: TextStyle(
